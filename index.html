@@ -51,7 +51,7 @@
             <div class="navbar-end">
                 <button class="btn text-lime-500 text-xl">
                     Bus 
-                    <i class="fa-solid fa-bus"></i>
+                    <img src="images/bus-icon.png" alt="">
                 </button>
             </div>
         </nav>
@@ -73,8 +73,93 @@
     </header>
 
     <!-- main area -->
-    <main class="container mx-auto p-2 md:px-5 bg-gray-400 rounded-t-3xl">
-
+    <main class="">
+        <!-- offer section -->
+        <section class="text-center container mx-auto p-2 md:px-5">
+            <h2 class="text-4xl mb-10 font-bold">Best offers for you</h2>
+            <div class="flex flex-col md:flex-row mb-10 gap-8 justify-center">
+                <div class="flex *:p-8 *:rounded-3xl">
+                    <div class="bg-yellow-500 border-r-2 border-r-white border-dashed">
+                        <h2 class="text-4xl font-black">15% OFF</h2>
+                        <h3 class="font-semibold text-xl">on your next purchase</h3>
+                        <h4 class="font-medium text-xl text-gray-700">use by January 2024</h4>
+                    </div>
+                    <div class="bg-yellow-500 flex justify-center items-center">
+                        <div>
+                            <h2 class="text-4xl font-black">NEW15</h2>
+                            <h3 class="font-medium text-xl text-gray-700">Coupon Code</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex *:p-8 *:rounded-3xl">
+                    <div class="bg-pink-500 border-r-2 border-r-white border-dashed">
+                        <h2 class="text-4xl font-black">20% OFF</h2>
+                        <h3 class="font-semibold text-xl">on your next purchase</h3>
+                        <h4 class="font-medium text-xl text-gray-700">use by January 2024</h4>
+                    </div>
+                    <div class="bg-pink-500 flex justify-center items-center">
+                        <div>
+                            <h2 class="text-4xl font-black">Couple 20</h2>
+                            <h3 class="font-medium text-xl text-gray-700">Coupon Code</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn text-xl font-bold border-2 border-lime-500 text-lime-500">See All Offers</button>
+        </section>
+        <!-- ticket section -->
+        <section class="container mx-auto mt-20 rounded-t-3xl p-2 py-20 md:px-5 bg-gray-200 ">
+            <div class="text-center space-y-5">
+                <h3 class="text-4xl font-bold">P.H Paribahan</h3>
+                <p class="font_inter">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <!-- seat area -->
+            <div class="bg-white px-2 py-5 lg:py-0 lg:px-10 mt-10 rounded-3xl flex flex-col lg:flex-row justify-center items-center">
+                <!-- seat area -->
+                <div class="w-full lg:flex-1">
+                    <div class="flex flex-col md:flex-row md:justify-between items-center">
+                        <div class="flex gap-5">
+                            <img src="images/bus-logo.png" alt="">
+                            <div class="*:text-base">
+                                <h3 class="md:text-3xl font-medium">Greenline Paribahan</h3>
+                                <h4 class="md:text-lg font-normal text-gray-500">Coach-009-WEB ! AC_Business</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="inline-flex gap-1 text-base md:text-lg font-medium font_inter text-lime-500">
+                                <img src="images/seat-green.png" alt="">
+                                <span>40</span> Seats left
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="bg-gray-300 p-8 mt-10 rounded-3xl space-y-5">
+                        <div class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
+                            <p class="text-gray-500">Route</p>
+                            <p>Dhaka - Sylhet</p>
+                        </div>
+                        <div class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
+                            <p class="text-gray-500">Departure Time</p>
+                            <p>9:00 PM</p>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-5 justify-between *:font-medium *:text-lg *:text-center *:bg-gray-400 *:rounded-xl *:p-2">
+                            <p>Boarding Point - Laxmipur</p>
+                            <p>Dropping Point - Bogura</p>
+                            <p>Est. Time - 11 Hour</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:h-full">
+                    <img src="images/info-devider.png" alt="">
+                </div>
+                <div class="text-center">
+                    <div class="flex w-full justify-center items-center">
+                        <img class="self-center" src="images/fare.png" alt="ticket fare">
+                    </div>
+                    <h3 class="text-3xl font-bold"><span>550</span> Taka</h3>
+                    <h4 class="text-2xl  font-semibold text-gray-400">Per Seat</h4>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer area -->
