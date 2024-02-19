@@ -8,10 +8,13 @@
     <!-- google font Inter & Raleway -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- font-awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwindCSS and daisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,11 +30,14 @@
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Destination</a></li>
@@ -50,7 +56,7 @@
             </div>
             <div class="navbar-end">
                 <button class="btn text-lime-500 text-xl">
-                    Bus 
+                    Bus
                     <img src="images/bus-icon.png" alt="">
                 </button>
             </div>
@@ -61,12 +67,13 @@
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-2xl space-y-5">
-                    <h1 class="leading-[86px] text-6xl font-extrabold">End-to-End Travel with 
+                    <h1 class="leading-[86px] text-6xl font-extrabold">End-to-End Travel with
                         <span class="text-lime-500">M Paribahan</span>
                     </h1>
                     <p class="font_inter">Yes, you can run unit tests and view the results directly within the app. The
                         integrated testing features allow for a streamlined .</p>
-                    <button class="btn bg-lime-500 font-semibold border-none text-xl">Buy Tickets</button>
+                    <a href="#ticket_counter"> <button class="btn bg-lime-500 font-semibold border-none text-xl">Buy
+                            Tickets</button></a>
                 </div>
             </div>
         </div>
@@ -108,13 +115,15 @@
             <button class="btn text-xl font-bold border-2 border-lime-500 text-lime-500">See All Offers</button>
         </section>
         <!-- ticket section -->
-        <section class="container mx-auto mt-20 rounded-t-3xl p-2 py-20 md:px-5 bg-gray-200 ">
+        <section id="ticket_counter" class="container mx-auto mt-20 rounded-t-3xl p-2 py-20 md:px-5 bg-gray-200 ">
             <div class="text-center space-y-5">
                 <h3 class="text-4xl font-bold">P.H Paribahan</h3>
-                <p class="font_inter">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                <p class="font_inter">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined .</p>
             </div>
             <!-- seat area -->
-            <div class="bg-white px-2 py-5 lg:py-0 lg:px-10 mt-10 rounded-3xl flex flex-col lg:flex-row justify-center items-center">
+            <div
+                class="bg-white px-2 py-5 lg:py-0 lg:px-10 mt-10 rounded-3xl flex flex-col lg:flex-row justify-center items-center">
                 <!-- seat area -->
                 <div class="w-full lg:flex-1">
                     <div class="flex flex-col md:flex-row md:justify-between items-center">
@@ -133,15 +142,18 @@
                         </div>
                     </div>
                     <div class="bg-gray-300 p-8 mt-10 rounded-3xl space-y-5">
-                        <div class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
+                        <div
+                            class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
                             <p class="text-gray-500">Route</p>
                             <p>Dhaka - Sylhet</p>
                         </div>
-                        <div class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
+                        <div
+                            class="border-b-2 border-dashed border-gray-400 flex justify-between *:text-lg *:font-semibold p-2">
                             <p class="text-gray-500">Departure Time</p>
                             <p>9:00 PM</p>
                         </div>
-                        <div class="flex flex-col md:flex-row gap-5 justify-between *:font-medium *:text-lg *:text-center *:bg-gray-400 *:rounded-xl *:p-2">
+                        <div
+                            class="flex flex-col md:flex-row gap-5 justify-between *:font-medium *:text-lg *:text-center *:bg-gray-400 *:rounded-xl *:p-2">
                             <p>Boarding Point - Laxmipur</p>
                             <p>Dropping Point - Bogura</p>
                             <p>Est. Time - 11 Hour</p>
@@ -163,8 +175,39 @@
     </main>
 
     <!-- footer area -->
-    <footer>
-
+    <footer class="bg-[#030712] text-white container mx-auto py-10 p-2 md:px-5">
+        <div
+            class="flex flex-col gap-5 md:flex-row py-5 text-center md:justify-between border-b-2 border-gray-400 border-dashed">
+            <div>
+                <h3 class="text-4xl font-extrabold">M-Ticket</h3>
+                <p>M-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div>
+                <h6 class="text-xl font-semibold">Download our app</h6>
+                <div class="bg-black p-2 rounded-lg flex gap-2 justify-center">
+                    <img src="images/playstore.png" alt="">
+                    <div class="font-semibold">
+                        <p class="text-sm">GET IT ON</p>
+                        <p class="text-lg">Google Play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer bottom area -->
+        <div class="flex flex-col md:flex-row text-center md:justify-between mt-5">
+            <p class="font-normal text-gray-400 font_inter">@all rights reserved, P-Ticket services limited.2024</p>
+            <ul class="font_inter *:font-normal flex flex-col md:flex-row gap-2 md:gap-6">
+                <li>
+                    <a href="#">Terms & condition</a>
+                </li>
+                <li>
+                    <a href="#">Return & refund policy</a>
+                </li>
+                <li>
+                    <a href="#">Privacy policy</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <!-- script files -->
