@@ -178,9 +178,9 @@
             <!-- seat booking container -->
             <div class="flex flex-col lg:flex-row p-5 gap-5 justify-between *:p-4 bg-white rounded-2xl">
                 <!-- select seat area -->
-                <div class="flex-auto border-r-2 border-gray-400 border-dashed">
-                    <h3 class="text-2xl font-semibold border-b-2 border-gray-400 border-dashed pb-2">Select Your Seat</h3>
-                    <div class="flex justify-between mt-4 border-b-2 border-gray-400 border-dashed pb-2 *:inline-flex *:gap-2 *:font_inter *:text-gray-400 *:font-medium">
+                <div class="flex-auto border-r-2 border-gray-300 border-dashed">
+                    <h3 class="text-2xl font-semibold border-b-2 border-gray-300 border-dashed pb-2">Select Your Seat</h3>
+                    <div class="flex justify-between mt-4 border-b-2 border-gray-300 border-dashed pb-2 *:inline-flex *:gap-2 *:font_inter *:text-gray-400 *:font-medium">
                         <p>
                             <img src="images/seat-gray.png" alt="Available seat">
                             Available
@@ -265,7 +265,78 @@
                 </div>
                 <!-- total fare area-->
                 <div class="w-[500px]">
-                    <h3 class="text-2xl font-semibold border-b-2 border-gray-400 border-dashed pb-2">Select Your Seat</h3>
+                    <h3 class="text-2xl font-semibold border-b-2 border-gray-300 border-dashed pb-2">Select Your Seat</h3>
+                    <div class="my-4 bg-gray-200 rounded-xl p-6">
+                        <!-- seat count -->
+                        <div class="flex justify-between border-b-2 border-gray-300 border-dashed *:font-medium *:text-lg pb-2">
+                            <p class="font_inter">
+                                Seat
+                                <sup id="seat_count" class="bg-lime-500 rounded-md text-white font_itner font-bold px-1">0</sup>
+                            </p>
+                            <p class="font_inter">Class</p>
+                            <p class="font_inter">Price</p>
+                        </div>
+                        <!-- seat append -->
+                        <div id="append_seat" class="flex justify-between my-3 py-3 border-b-2 border-gray-300 border-solid">
+                            <!--  -->
+                        </div>
+                        <!-- total price-->
+                        <div class="flex justify-between *:font-medium *:text-lg">
+                            <p class="font_inter">Total Price</p>
+                            <p class="font_inter">
+                                BDT 
+                                <span id="total_amount">0</span>
+                            </p>
+                        </div>
+                        <!-- coupon input -->
+                        <div class="flex justify-center my-4 rounded-xl">
+                            <form class=" join bg-white p-3 w-full">
+                                <input class="w-full join-item input input-bordered border-0 outline-0" placeholder="Have any coupon?" />
+                                <button class="join-item btn bg-lime-500 text-white hover:text-black">Subscribe</button>
+                            </form>
+                        </div>
+                        <!-- grand total price-->
+                        <div class="flex justify-between *:font-medium *:text-lg">
+                            <p class="font_inter">Grand Total</p>
+                            <p class="font_inter">
+                                BDT 
+                                <span id="total_amount">0</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- passenger info -->
+                    <div>
+                        <form>
+                            <div class="space-y-2 mb-3">
+                                <label for="name" class="label">
+                                    <span class="font_inter font-semibold text-lg">Passenger Name*</span>
+                                </label>
+                                <input id="name" class="w-full p-6 border-2 border-gray-300 outline-0 input font-medium text-base" type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="space-y-2 mb-3">
+                                <label for="name" class="label">
+                                    <span class="font_inter font-semibold text-lg">Phone Number*</span>
+                                </label>
+                                <input id="name" class="w-full p-6 border-2 border-gray-300 outline-0 input font-medium text-base" type="number" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="space-y-2 mb-3">
+                                <label for="name" class="label">
+                                    <span class="font_inter font-semibold text-lg">Email ID</span>
+                                </label>
+                                <input id="name"
+                                    class="w-full p-6 border-2 border-gray-300 outline-0 input font-medium text-base" type="email" placeholder="Enter your email id">
+                            </div>
+                            <button class="btn text-xl font-extrabold bg-lime-500 text-white w-full">Next</button>
+                        </form>
+                        <div class="flex justify-center gap-5 mt-4">
+                            <p>
+                                <a href="#" class="text-lg font_inter text-gray-400 underline">Terms and Conditions</a>
+                            </p>
+                            <p>
+                                <a href="#" class="text-lg font_inter text-gray-400 underline">Terms and Conditions</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
