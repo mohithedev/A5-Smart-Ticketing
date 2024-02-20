@@ -7,3 +7,6 @@
 ul li{
     font-size: 1.125rem;
 }
+body button{
+    font-family: "Inter", sans-serif;
+}
