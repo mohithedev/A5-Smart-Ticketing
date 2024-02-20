@@ -72,8 +72,7 @@
                     </h1>
                     <p class="font_inter">Yes, you can run unit tests and view the results directly within the app. The
                         integrated testing features allow for a streamlined .</p>
-                    <a href="#ticket_counter"> <button class="btn bg-lime-500 font-semibold border-none text-xl">Buy
-                            Tickets</button></a>
+                    <a href="#ticket_counter"> <button class="btn bg-lime-500 font-semibold border-none text-xl">Buy Tickets</button></a>
                 </div>
             </div>
         </div>
@@ -114,6 +113,7 @@
             </div>
             <button class="btn text-xl font-bold border-2 border-lime-500 text-lime-500">See All Offers</button>
         </section>
+
         <!-- ticket section -->
         <section id="ticket_counter" class="container mx-auto mt-20 rounded-t-3xl p-2 py-20 md:px-5 bg-gray-200 ">
             <div class="text-center space-y-5">
@@ -172,12 +172,109 @@
                 </div>
             </div>
         </section>
+
+        <!-- booking section -->
+        <section class="container mx-auto p-2 md:px-5 bg-gray-200 ">
+            <!-- seat booking container -->
+            <div class="flex flex-col lg:flex-row p-5 gap-5 justify-between *:p-4 bg-white rounded-2xl">
+                <!-- select seat area -->
+                <div class="flex-auto border-r-2 border-gray-400 border-dashed">
+                    <h3 class="text-2xl font-semibold border-b-2 border-gray-400 border-dashed pb-2">Select Your Seat</h3>
+                    <div class="flex justify-between mt-4 border-b-2 border-gray-400 border-dashed pb-2 *:inline-flex *:gap-2 *:font_inter *:text-gray-400 *:font-medium">
+                        <p>
+                            <img src="images/seat-gray.png" alt="Available seat">
+                            Available
+                        </p>
+                        <p>
+                            <img src="images/seat-green-filled.png" alt="Selected seat">
+                            Selected
+                        </p>
+                    </div>
+                    <!-- bus seat map-->
+                    <div class="flex justify-end">
+                        <button class="btn my-5 bg-gray-400 w-24"><img src="images/wheel.png" alt=""></button>
+                    </div>
+                    <div class="flex gap-10">
+                        <div class="flex gap-8 flex-col *:font-medium *:text-lg *:text-gray-400">
+                            <button class="A font_inter">A</button>
+                            <button class="B font_inter">B</button>
+                            <button class="C font_inter">C</button>
+                            <button class="D font_inter">D</button>
+                            <button class="E font_inter">E</button>
+                            <button class="F font_inter">F</button>
+                            <button class="G font_inter">G</button>
+                            <button class="H font_inter">H</button>
+                            <button class="I font_inter">I</button>
+                            <button class="J font_inter">J</button>
+                        </div>
+                        <!-- left side seat -->
+                        <div class=" flex gap-3 w-full *:flex *:flex-col *:gap-2 *:w-full">
+                            <div>
+                                <button id="A1" class="btn font_inter">A1</button>
+                                <button id="B1" class="btn font_inter">B1</button>
+                                <button id="C1" class="btn font_inter">C1</button>
+                                <button id="D1" class="btn font_inter">D1</button>
+                                <button id="E1" class="btn font_inter">E1</button>
+                                <button id="F1" class="btn font_inter">F1</button>
+                                <button id="G1" class="btn font_inter">G1</button>
+                                <button id="H1" class="btn font_inter">H1</button>
+                                <button id="I1" class="btn font_inter">I1</button>
+                                <button id="J1" class="btn font_inter">J1</button>
+                            </div>
+                            <div>
+                                <button id="A2" class="btn font_inter">A2</button>
+                                <button id="B2" class="btn font_inter">B2</button>
+                                <button id="C2" class="btn font_inter">C2</button>
+                                <button id="D2" class="btn font_inter">D2</button>
+                                <button id="E2" class="btn font_inter">E2</button>
+                                <button id="F2" class="btn font_inter">F2</button>
+                                <button id="G2" class="btn font_inter">G2</button>
+                                <button id="H2" class="btn font_inter">H2</button>
+                                <button id="I2" class="btn font_inter">I2</button>
+                                <button id="J2" class="btn font_inter">J2</button>
+                            </div>
+                        </div>
+                        <!-- right side seat -->
+                        <div class="flex gap-2 w-full *:flex *:flex-col *:gap-2 *:w-full">
+                            <div>
+                                <button id="A3" class="btn font_inter">A3</button>
+                                <button id="B3" class="btn font_inter">B3</button>
+                                <button id="C3" class="btn font_inter">C3</button>
+                                <button id="D3" class="btn font_inter">D3</button>
+                                <button id="E3" class="btn font_inter">E3</button>
+                                <button id="F3" class="btn font_inter">F3</button>
+                                <button id="G3" class="btn font_inter">G3</button>
+                                <button id="H3" class="btn font_inter">H3</button>
+                                <button id="I3" class="btn font_inter">I3</button>
+                                <button id="J3" class="btn font_inter">J3</button>
+                            </div>
+                            <div>
+                                <button id="A4" class="btn font_inter">A4</button>
+                                <button id="B4" class="btn font_inter">B4</button>
+                                <button id="C4" class="btn font_inter">C4</button>
+                                <button id="D4" class="btn font_inter">D4</button>
+                                <button id="E4" class="btn font_inter">E4</button>
+                                <button id="F4" class="btn font_inter">F4</button>
+                                <button id="G4" class="btn font_inter">G4</button>
+                                <button id="H4" class="btn font_inter">H4</button>
+                                <button id="I4" class="btn font_inter">I4</button>
+                                <button id="J4" class="btn font_inter">J4</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- total fare area-->
+                <div class="w-[500px]">
+                    <h3 class="text-2xl font-semibold border-b-2 border-gray-400 border-dashed pb-2">Select Your Seat</h3>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer area -->
     <footer class="bg-[#030712] text-white container mx-auto py-10 p-2 md:px-5">
         <div
-            class="flex flex-col gap-5 md:flex-row py-5 text-center md:justify-between border-b-2 border-gray-400 border-dashed">
+            class="flex flex-col gap-5 md:flex-row py-5 text-center md:text-left md:justify-between border-b-2 border-gray-400 border-dashed">
             <div>
                 <h3 class="text-4xl font-extrabold">M-Ticket</h3>
                 <p>M-Ticket is a digital platform to make your daily commuting better.</p>
