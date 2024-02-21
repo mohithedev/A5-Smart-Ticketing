@@ -1,10 +1,12 @@
 const allBtn = document.getElementsByClassName('btnStyle');
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
+        // btn bg-color
         const bgStyle = event.target;
         const text = bgStyle.innerText;
         bgStyle.style.background = '#1DD100';
 
+        // seat append
         const div = document.createElement('div');
         const p = document.createElement('p');
         p.innerText = text;
@@ -23,7 +25,10 @@ for (const btn of allBtn) {
         seatCount('seat_count');
         totalAmount(getValueById('ticket_fare'));
         grandTotalAmount();
+
+        event.target.setAttribute("disabled", false);
     });
+
 }
 
 
@@ -31,28 +36,38 @@ for (const btn of allBtn) {
 getValueById('total_amount');
 getValueById('grand_total');
 
-// grand total and coupon
-function grandTotalAmount(control) {
-    const previousAmount = document.getElementById("total_amount").innerText;
-    const convertedTotalAmount = parseInt(previousAmount);
+
+// coupon
+const couponBtn = document.getElementById('coupon_btn');
+couponBtn.addEventListener('click', function () {
     const coupon = document.getElementById('coupon_code').value;
-    const couponBtn = document.getElementById('coupon_btn');
-    if (control) {
+    if (coupon) {
         if (coupon == 'NEW15') {
-            const discount1 = convertedTotalAmount * 15 / 100;
-            document.getElementById('grand_total').innerText = convertedTotalAmount - discount1;
-        } else if (coupon == 'Couple 20') {
-            const discount2 = convertedTotalAmount * 20 / 100;
-            document.getElementById('grand_total').innerText = convertedTotalAmount - discount2;
-        } else {
+            const discountPrice = grandTotalAmount() * 15 / 100;
+            const discount1 = grandTotalAmount() - discountPrice;
+            document.getElementById('grand_total').innerText = discount1;
+            
+        } 
+        else if (coupon == 'Couple 20') {
+            const discountPrice2 = grandTotalAmount() * 20 / 100;
+            const discount2 = grandTotalAmount() - discountPrice2;
+            document.getElementById('grand_total').innerText = discount2;
+        } 
+        else {
             alert('Please input a valid coupon code');
             return
         }
     } else {
-        document.getElementById('grand_total').innerText = convertedTotalAmount;
+        document.getElementById('grand_total').innerText = grandTotalAmount();
     }
-    document.addEventListener('click', couponBtn);
+})
 
+
+// grand total
+function grandTotalAmount() {
+    const previousAmount = document.getElementById("total_amount").innerText;
+    const convertedTotalAmount = parseInt(previousAmount);
+    document.getElementById('grand_total').innerText = convertedTotalAmount;
 }
 
 
