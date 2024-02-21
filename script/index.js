@@ -1,4 +1,5 @@
 const allBtn = document.getElementsByClassName('btnStyle');
+const maxSelectionSeat = 4;
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
         // btn bg-color
@@ -19,19 +20,22 @@ for (const btn of allBtn) {
         div.appendChild(p);
         div.appendChild(p2);
         div.appendChild(p3);
-
-
+        
         seatDecrease('seat_decrease');
         seatCount('seat_count');
         totalAmount(getValueById('ticket_fare'));
         grandTotalAmount();
-
         event.target.setAttribute("disabled", false);
     });
-
 }
 
 
+// success window
+const success = document.getElementById('success_btn')
+success.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = '../success.html';
+})
 
 
 // coupon
@@ -44,14 +48,12 @@ couponBtn.addEventListener('click', function (event) {
             const discountPrice = grandTotalAmount() * 15 / 100;
             const discount1 = grandTotalAmount() - discountPrice;
             document.getElementById('grand_total').innerText = discount1;
-            
-        } 
-        else if (coupon == 'Couple 20') {
+
+        } else if (coupon == 'Couple 20') {
             const discountPrice2 = grandTotalAmount() * 20 / 100;
             const discount2 = grandTotalAmount() - discountPrice2;
             document.getElementById('grand_total').innerText = discount2;
-        } 
-        else {
+        } else {
             alert('Please input a valid coupon code');
         }
     } else {
