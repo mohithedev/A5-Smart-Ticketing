@@ -33,14 +33,12 @@ for (const btn of allBtn) {
 
 
 
-getValueById('total_amount');
-getValueById('grand_total');
-
 
 // coupon
 const couponBtn = document.getElementById('coupon_btn');
-couponBtn.addEventListener('click', function () {
+couponBtn.addEventListener('click', function (event) {
     const coupon = document.getElementById('coupon_code').value;
+    event.preventDefault();
     if (coupon) {
         if (coupon == 'NEW15') {
             const discountPrice = grandTotalAmount() * 15 / 100;
@@ -55,7 +53,6 @@ couponBtn.addEventListener('click', function () {
         } 
         else {
             alert('Please input a valid coupon code');
-            return
         }
     } else {
         document.getElementById('grand_total').innerText = grandTotalAmount();
@@ -68,6 +65,7 @@ function grandTotalAmount() {
     const previousAmount = document.getElementById("total_amount").innerText;
     const convertedTotalAmount = parseInt(previousAmount);
     document.getElementById('grand_total').innerText = convertedTotalAmount;
+    return convertedTotalAmount;
 }
 
 
