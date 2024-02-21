@@ -21,6 +21,7 @@ for (const btn of allBtn) {
 
         seatDecrease('seat_decrease');
         seatCount('seat_count');
+        totalAmount(getValueById('ticket_fare'));
     });
 }
 
@@ -28,6 +29,15 @@ for (const btn of allBtn) {
 
 getValueById('total_amount');
 getValueById('grand_total');
+
+
+function totalAmount(price) {
+    const previousAmount = document.getElementById("total_amount").innerText;
+    const convertedTotalAmount = parseInt(previousAmount);
+    const convertedAmount = price;
+    const sum = convertedTotalAmount + convertedAmount;
+    document.getElementById("total_amount").innerText = sum;
+}
 
 
 function seatCount(){
