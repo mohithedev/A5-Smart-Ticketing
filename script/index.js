@@ -30,12 +30,7 @@ for (const btn of allBtn) {
 }
 
 
-// success window
-const success = document.getElementById('success_btn')
-success.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.location.href = '../success.html';
-})
+
 
 
 // coupon
@@ -61,6 +56,12 @@ couponBtn.addEventListener('click', function (event) {
     }
 })
 
+// success window
+const success = document.getElementById('success_btn')
+success.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = '../success.html';
+})
 
 // grand total
 function grandTotalAmount() {
