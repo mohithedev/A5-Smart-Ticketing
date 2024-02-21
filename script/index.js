@@ -2,7 +2,22 @@ const allBtn = document.getElementsByClassName('btnStyle');
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
         const bgStyle = event.target;
+        const text = bgStyle.innerText;
         bgStyle.style.background = '#1DD100';
+
+        const div = document.createElement('div');
+        const p = document.createElement('p');
+        p.innerText = text;
+        const p2 = document.createElement('p');
+        p2.innerText = 'Economy';
+        const p3 = document.createElement('p');
+        p3.innerText = '550';
+        document.getElementById('append_seat').appendChild(div);
+        div.classList.add('append_div')
+        div.appendChild(p);
+        div.appendChild(p2);
+        div.appendChild(p3);
+
 
         seatDecrease('seat_decrease');
         seatCount('seat_count');
