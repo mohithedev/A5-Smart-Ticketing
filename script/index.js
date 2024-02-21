@@ -22,6 +22,7 @@ for (const btn of allBtn) {
         seatDecrease('seat_decrease');
         seatCount('seat_count');
         totalAmount(getValueById('ticket_fare'));
+        grandTotalAmount();
     });
 }
 
@@ -30,30 +31,60 @@ for (const btn of allBtn) {
 getValueById('total_amount');
 getValueById('grand_total');
 
-
-function totalAmount(price) {
+// grand total and coupon
+function grandTotalAmount(control) {
     const previousAmount = document.getElementById("total_amount").innerText;
     const convertedTotalAmount = parseInt(previousAmount);
-    const convertedAmount = price;
+    const coupon = document.getElementById('coupon_code').value;
+    const couponBtn = document.getElementById('coupon_btn');
+    if (control) {
+        if (coupon == 'NEW15') {
+            const discount1 = convertedTotalAmount * 15 / 100;
+            document.getElementById('grand_total').innerText = convertedTotalAmount - discount1;
+        } else if (coupon == 'Couple 20') {
+            const discount2 = convertedTotalAmount * 20 / 100;
+            document.getElementById('grand_total').innerText = convertedTotalAmount - discount2;
+        } else {
+            alert('Please input a valid coupon code');
+            return
+        }
+    } else {
+        document.getElementById('grand_total').innerText = convertedTotalAmount;
+    }
+    document.addEventListener('click', couponBtn);
+
+}
+
+
+// total price
+function totalAmount(value) {
+    const previousAmount = document.getElementById("total_amount").innerText;
+    const convertedTotalAmount = parseInt(previousAmount);
+    const convertedAmount = value;
     const sum = convertedTotalAmount + convertedAmount;
     document.getElementById("total_amount").innerText = sum;
 }
 
 
-function seatCount(){
+// seat number count
+function seatCount() {
     const seat = document.getElementById('seat_count').innerText;
     const seatValue = parseInt(seat);
     const newValue = document.getElementById('seat_count').innerText = seatValue + 1;
     return newValue;
 }
 
-function seatDecrease(){
+
+// seat decrease form main seat number
+function seatDecrease() {
     const seat = document.getElementById('seat_decrease').innerText;
     const seatValue = parseInt(seat);
     const newValue = document.getElementById('seat_decrease').innerText = seatValue - 1;
     return newValue;
 }
 
+
+// value converted string to number
 function getValueById(id) {
     const value = document.getElementById(id).innerText;
     return parseInt(value);
